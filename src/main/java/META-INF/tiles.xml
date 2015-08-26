@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="/index" template="/WEB-INF/jsp/layouts/base.jsp">
+		<put-attribute name="header" value="/WEB-INF/jsp/layouts/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/layouts/menu.jsp" />
+		<put-attribute name="body" value="/WEB-INF/jsp/layouts/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/layouts/footer.jsp" />
+	</definition>
+
+	<definition name="login/index" extends="/index">
+	</definition>
+	
+	<definition name="login/form" extends="/index">
+		<put-attribute name="body" value="/WEB-INF/jsp/login/form.jsp" />
+	</definition>
+	
+	<definition name="minicurso/form" extends="/index">
+		<put-attribute name="body" value="/WEB-INF/jsp/minicurso/form.jsp" />
+	</definition>
+	
+	<definition name="minicurso/lista" extends="/index">
+		<put-attribute name="body" value="/WEB-INF/jsp/minicurso/lista.jsp" />
+	</definition>
+	
+</tiles-definitions>
